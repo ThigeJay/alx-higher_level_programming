@@ -1,12 +1,10 @@
 #!/usr/bin/python3
-def add(a, b):
-    """My addition function
+if __name__ == "__main__":
+    from add_0 import add
 
-    Args:
-        a: first integer
-        b: second integer
+    # Assign values to variables
+    a = 1
+    b = 2
 
-    Returns:
-        The return value. a + b
-    """
-    return (a + b)
+    # Print the result of the addition
+    print("{:d} + {:d} = {:d}".format(a, b, add(a, b)))
