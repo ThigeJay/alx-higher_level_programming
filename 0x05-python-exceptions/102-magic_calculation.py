@@ -1,15 +1,24 @@
 #!/usr/bin/python3
-"""The magic calculatorrrrrr"""
-
-
 def magic_calculation(a, b):
+    # Initialize result to 0
     result = 0
-    for i in range(1, 4):
+
+    # Loop from 1 to 2 (exclusive)
+    for i in range(1, 3):
         try:
+            # Check if i is greater than a
             if i > a:
+                # Raise an exception if i is too far
                 raise Exception('Too far')
-            result += (a ** b) / i
+
+            # Update result by adding a^b divided by i
+            result += a ** b / i
+
         except Exception:
-            result += a + b
+            # Handle the exception by updating result to b + a
+            result = b + a
+            # Break out of the loop
             break
+
+    # Return the final result
     return result
